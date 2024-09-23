@@ -13,7 +13,7 @@ dotEnv.config({path : './config/config.env'});
 
 // configure express to receive the form data
 app.use(express.json());
-app.use(express.urlencoded({extended : false}));
+app.use(express.urlencoded({limit:'100mp',extended : true}));
 
 const hostname = process.env.HOST_NAME;
 const port = process.env.PORT;
